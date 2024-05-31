@@ -19,7 +19,7 @@ class _SensorPageDinasState extends State<TambahSensorPageDinas> {
           children: [
             Padding(padding: EdgeInsets.only(left: 10.0)),
             Text(
-              "Tambah Sensor",
+              "Aktifkan pompe",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,

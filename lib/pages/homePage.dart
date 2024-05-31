@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:aplikasibaru/pages/check.dart';
+import 'package:aplikasibaru/pages/detail.dart';
+import 'package:aplikasibaru/prosesData/get_data.dart';
 import 'package:flutter/material.dart';
 
 class HomePageDinas extends StatefulWidget {
@@ -11,6 +12,11 @@ class HomePageDinas extends StatefulWidget {
 }
 
 class _HomePageDinasState extends State<HomePageDinas> {
+  @override
+  void initState() {
+    // TODO: implement initState
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,16 +78,16 @@ class _HomePageDinasState extends State<HomePageDinas> {
                       ),
                       buildMenuButton(
                         context,
-                        iconPath: "assets/image/add.png",
-                        title: "Cek Status",
-                        subtitle: "Detail",
+                        iconPath: "assets/pompe.png",
+                        title: "Pompa",
+                        subtitle: "Aktifkan",
                         routeName: '/cekstatus',
                       ),
                       buildMenuButton(
                         context,
                         iconPath: "assets/image/megaphone.png",
                         title: "Notifikasi",
-                        subtitle: "info peringatan",
+                        subtitle: "Info",
                         routeName: '/notif',
                       ),
                     ],
@@ -95,66 +101,66 @@ class _HomePageDinasState extends State<HomePageDinas> {
     );
   }
 
-  Widget _pencarianBuild(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Pencarian'),
-        actions: [
-          IconButton(
-            icon: Icon(Icons.search),
-            onPressed: () {
-              // Implement search functionality
-            },
-          ),
-        ],
-      ),
-      body: Column(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Cari...',
-                prefixIcon: Icon(Icons.search),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(25.0),
-                ),
-              ),
-              onChanged: (value) {
-                // Implement search filter logic
-              },
-            ),
-          ),
-          Expanded(
-            child: ListView(
-              children: [
-                ListTile(
-                  title: Text('Limpok'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => StatusPage(place: 'Limpok')),
-                    );
-                  },
-                ),
-                ListTile(
-                  title: Text('Lambaro'),
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => StatusPage(place: 'Lambaro')),
-                    );
-                  },
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+  // Widget _pencarianBuild(BuildContext context) {
+  //   return Scaffold(
+  //     appBar: AppBar(
+  //       title: Text('Pencarian'),
+  //       actions: [
+  //         IconButton(
+  //           icon: Icon(Icons.search),
+  //           onPressed: () {
+  //             // Implement search functionality
+  //           },
+  //         ),
+  //       ],
+  //     ),
+  //     body: Column(
+  //       children: [
+  //         Padding(
+  //           padding: const EdgeInsets.all(8.0),
+  //           child: TextField(
+  //             decoration: InputDecoration(
+  //               hintText: 'Cari...',
+  //               prefixIcon: Icon(Icons.search),
+  //               border: OutlineInputBorder(
+  //                 borderRadius: BorderRadius.circular(25.0),
+  //               ),
+  //             ),
+  //             onChanged: (value) {
+  //               // Implement search filter logic
+  //             },
+  //           ),
+  //         ),
+  //         Expanded(
+  //           child: ListView(
+  //             children: [
+  //               ListTile(
+  //                 title: Text('Limpok'),
+  //                 onTap: () {
+  //                   Navigator.push(
+  //                     context,
+  //                     MaterialPageRoute(
+  //                         builder: (context) => StatusPage(place: 'Limpok')),
+  //                   );
+  //                 },
+  //               ),
+  //               ListTile(
+  //                 title: Text('Lambaro'),
+  //                 onTap: () {
+  //                   Navigator.push(
+  //                     context,
+  //                     MaterialPageRoute(
+  //                         builder: (context) => StatusPage(place: 'Lambaro')),
+  //                   );
+  //                 },
+  //               ),
+  //             ],
+  //           ),
+  //         ),
+  //       ],
+  //     ),
+  //   );
+  // }
 
   Widget buildMenuButton(
     BuildContext context, {

@@ -21,7 +21,7 @@ class _MapInteractiveState extends State<MapInteractive> {
           children: [
             Padding(padding: EdgeInsets.only(left: 10.0)),
             Text(
-              "Zona wilayah Banda Aceh",
+              "Zona Wilayah Banda Aceh",
               style: TextStyle(
                 fontSize: 20,
                 color: Colors.white,

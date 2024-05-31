@@ -1,8 +1,9 @@
 //import 'package:aplikasibaru/backend/grafik.dart';
 
-import 'package:aplikasibaru/pages/check.dart';
+import 'package:aplikasibaru/pages/detail.dart';
 // import 'package:aplikasibaru/pages/.dart';
 import 'package:aplikasibaru/pages/daftarPage.dart';
+//import 'package:aplikasibaru/pages/detail.dart';
 import 'package:aplikasibaru/pages/homePage.dart';
 import 'package:aplikasibaru/pages/loading.dart';
 import 'package:aplikasibaru/pages/loginPage.dart';
@@ -14,7 +15,8 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter/material.dart';
 
-import 'package:aplikasibaru/backend/firebasesetting.dart';
+//import 'package:aplikasibaru/backend/firebasesetting.dart';
+import 'package:aplikasibaru/backend/get_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -31,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Aplikasi monitoring selokan terintegrasi berbasis IoT',
+      title: 'Aplikasi monitoring Irigasi terintegrasi berbasis IoT',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -46,9 +48,7 @@ class MyApp extends StatelessWidget {
         '/grafik': (context) => DataFetch(),
         '/zona': (context) => MapInteractive(),
         '/zona1': (context) => MapInteractivePoint(),
-        '/cekstatus': (context) => StatusPage(
-              place: 'sa',
-            ),
+        '/cekstatus': (context) => DetailStatus(),
         //'/percobaan': (context) => HalamanCoba(),
       },
     );

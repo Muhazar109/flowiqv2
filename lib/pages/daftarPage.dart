@@ -11,14 +11,14 @@ class DaftarPageDinas extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                    "FlowIQ v2",
+                    "Membuat Akun Baru",
                     style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
+                      fontSize: 28,
+                      fontWeight: FontWeight.w500,
                     ),
                   ),
                   Text(
-                    "Membuat Akun Baru",
+                    "FlowIQ v2",
                     style: TextStyle(
                         fontSize: 10,
                         fontWeight: FontWeight.w500,
